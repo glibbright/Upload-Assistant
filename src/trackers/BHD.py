@@ -513,7 +513,7 @@ class BHD:
 
         name = name.replace("DD+", "DDP")
 
-        if not meta.get('tag') and meta.get('type') in ['REMUX', 'ENCODE', 'WEBDL', 'WEBRIP']:
+        if not meta.get('tag') and not meta.get('is_disc'):
             name = f"{name}-NOGROUP"
 
         return name
